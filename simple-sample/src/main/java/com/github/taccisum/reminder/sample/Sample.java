@@ -6,10 +6,10 @@ import com.github.taccisum.reminder.builder.MessageBuilderFactory;
 import com.github.taccisum.reminder.channel.ChannelFactory;
 import com.github.taccisum.reminder.dispatcher.DefaultDispatcher;
 import com.github.taccisum.reminder.metadata.IniMetadata;
-import com.github.taccisum.reminder.sample.selector.FooTargetSelector;
 import com.github.taccisum.reminder.sample.builder.FooMessageBuilder;
 import com.github.taccisum.reminder.sample.channel.DBChannel;
 import com.github.taccisum.reminder.sample.channel.PushChannel;
+import com.github.taccisum.reminder.sample.selector.FooTargetSelector;
 import com.github.taccisum.reminder.selector.TargetSelectorFactory;
 import com.github.taccisum.reminder.sender.DefaultSender;
 
@@ -20,10 +20,10 @@ import com.github.taccisum.reminder.sender.DefaultSender;
 public class Sample {
     public static void main(String[] args) {
         Metadata metadata = new IniMetadata("classpath:sample.ini");
-        ChannelFactory.put(PushChannel.CODE, new PushChannel());
-        ChannelFactory.put(DBChannel.CODE, new DBChannel());
-        TargetSelectorFactory.put(RemindCode.FOO, new FooTargetSelector());
-        MessageBuilderFactory.put(RemindCode.FOO, new FooMessageBuilder(RemindCode.FOO, metadata));
+        ChannelFactory.put(new PushChannel());
+        ChannelFactory.put(new DBChannel());
+        TargetSelectorFactory.put(new FooTargetSelector());
+        MessageBuilderFactory.put(new FooMessageBuilder(metadata));
 
         DefaultDispatcher dispatcher = new DefaultDispatcher();
         DefaultSender sender = new DefaultSender();

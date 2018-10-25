@@ -1,14 +1,16 @@
-package com.github.taccisum.reminder.sample.builder;
+package com.github.taccisum.reminder.sample.springboot.component.builder;
 
 import com.github.taccisum.reminder.api.*;
 import com.github.taccisum.reminder.builder.TemaplteMessageBuilder;
 import com.github.taccisum.reminder.message.SimpleMessage;
-import com.github.taccisum.reminder.sample.RemindCode;
+import com.github.taccisum.reminder.sample.springboot.component.RemindCode;
+import org.springframework.stereotype.Component;
 
 /**
  * @author tac
- * @since 24/10/2018
+ * @since 25/10/2018
  */
+@Component
 public class FooMessageBuilder extends TemaplteMessageBuilder {
     public FooMessageBuilder(Metadata metadata) {
         super(metadata);

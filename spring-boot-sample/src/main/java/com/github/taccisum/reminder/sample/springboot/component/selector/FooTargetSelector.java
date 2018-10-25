@@ -1,17 +1,19 @@
-package com.github.taccisum.reminder.sample.selector;
+package com.github.taccisum.reminder.sample.springboot.component.selector;
 
 import com.github.taccisum.reminder.api.Target;
 import com.github.taccisum.reminder.api.TargetSelector;
-import com.github.taccisum.reminder.sample.RemindCode;
-import com.github.taccisum.reminder.sample.UserTarget;
+import com.github.taccisum.reminder.sample.springboot.component.RemindCode;
+import com.github.taccisum.reminder.sample.springboot.component.UserTarget;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author tac
- * @since 24/10/2018
+ * @since 25/10/2018
  */
+@Component
 public class FooTargetSelector implements TargetSelector {
     public String code() {
         return RemindCode.FOO;
