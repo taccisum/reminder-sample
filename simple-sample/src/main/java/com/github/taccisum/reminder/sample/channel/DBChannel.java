@@ -19,7 +19,7 @@ public class DBChannel implements Channel {
         return "db channel";
     }
 
-    public void receive(Target target, Message message, Object[] objects) {
+    public void send(Target target, Message message, Object[] objects) {
         System.out.println(String.format("send message \"%s\" via db channel", message.getBody()));
     }
 }
