@@ -20,6 +20,7 @@ public class PushChannel implements Channel {
     }
 
     public void send(Target target, Message message, Object[] objects) {
+//        throw new ChannelSendException();     // 抛出ChannelSendException触发降级
         System.out.println(String.format("send message \"%s\" via push channel", message.getBody()));
     }
 }
