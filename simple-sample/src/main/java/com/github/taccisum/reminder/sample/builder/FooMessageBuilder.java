@@ -1,7 +1,7 @@
 package com.github.taccisum.reminder.sample.builder;
 
 import com.github.taccisum.reminder.api.*;
-import com.github.taccisum.reminder.builder.TemaplteMessageBuilder;
+import com.github.taccisum.reminder.builder.TemplateMessageBuilder;
 import com.github.taccisum.reminder.message.SimpleMessage;
 import com.github.taccisum.reminder.sample.RemindCode;
 
@@ -9,7 +9,7 @@ import com.github.taccisum.reminder.sample.RemindCode;
  * @author tac
  * @since 24/10/2018
  */
-public class FooMessageBuilder extends TemaplteMessageBuilder {
+public class FooMessageBuilder extends TemplateMessageBuilder {
     public FooMessageBuilder(Metadata metadata) {
         super(metadata);
     }
